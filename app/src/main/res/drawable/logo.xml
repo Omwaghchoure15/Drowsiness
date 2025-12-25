@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 24 24">
+    <!-- Background: rounded square, customizable via CSS variable -->
+    <rect x="0" y="0" width="24" height="24" rx="5" fill="var(--bg, #1F2937)" />
+
+    <!-- Drowsy face icon: stroke-based, colorable via currentColor -->
+    <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <!-- Face circle -->
+        <circle cx="12" cy="12" r="8" />
+
+        <!-- Closed eyes -->
+        <path d="M7 10 C8.2 9.2 9.8 9.2 11 10" />
+        <path d="M13 10 C14.2 9.2 15.8 9.2 17 10" />
+
+        <!-- Yawning mouth -->
+        <circle cx="12" cy="15.5" r="2.4" />
+
+        <!-- Sleep Zs -->
+        <path d="M16 4 h3 l-3 3 h3" />
+        <path d="M18.5 7 h3 l-3 3 h3" />
+    </g>
+</svg>
