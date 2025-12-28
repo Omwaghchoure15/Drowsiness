@@ -32,7 +32,10 @@ import java.io.ByteArrayOutputStream
 
 @Composable
 fun DrowsinessScreen(viewModel: DrowsinessViewModel) {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8d198eecdf3bf42f79ee7773e982fd9283528a2a
     val uiState by viewModel.uiState.collectAsState()
     val context = LocalContext.current
     val lifecycleOwner = LocalLifecycleOwner.current
@@ -60,6 +63,10 @@ fun DrowsinessScreen(viewModel: DrowsinessViewModel) {
 
     LaunchedEffect(Unit) {
         val cameraProviderFuture = ProcessCameraProvider.getInstance(context)
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8d198eecdf3bf42f79ee7773e982fd9283528a2a
         val cameraProvider = withContext(Dispatchers.IO) {
             cameraProviderFuture.get()
         }
@@ -97,7 +104,11 @@ fun DrowsinessScreen(viewModel: DrowsinessViewModel) {
 
     Surface(
         modifier = Modifier.fillMaxSize(),
+<<<<<<< HEAD
         color = Color.Black
+=======
+        color = Color.Black        // force dark background
+>>>>>>> 8d198eecdf3bf42f79ee7773e982fd9283528a2a
     ) {
         Column(
             modifier = Modifier
