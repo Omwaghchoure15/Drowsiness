@@ -1,10 +1,5 @@
 package com.example.ddos.ui
 
-import android.graphics.Bitmap
-import android.graphics.BitmapFactory
-import android.graphics.ImageFormat
-import android.graphics.Rect
-import android.graphics.YuvImage
 import android.media.MediaPlayer
 import android.os.VibrationEffect
 import android.os.Vibrator
@@ -27,28 +22,31 @@ import androidx.core.content.ContextCompat
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import com.example.ddos.R
-import androidx.camera.core.ImageProxy
-import java.io.ByteArrayOutputStream
+
+
+@Composable
+private fun DrowsinessPreview(viewModel: DrowsinessViewModel){
+DrowsinessScreen(viewModel)
+
+}
 
 @Composable
 fun DrowsinessScreen(viewModel: DrowsinessViewModel) {
-<<<<<<< HEAD
 
-=======
->>>>>>> 8d198eecdf3bf42f79ee7773e982fd9283528a2a
     val uiState by viewModel.uiState.collectAsState()
     val context = LocalContext.current
     val lifecycleOwner = LocalLifecycleOwner.current
     val previewView = remember { PreviewView(context) }
     var mediaPlayer by remember { mutableStateOf<MediaPlayer?>(null) }
 
-    LaunchedEffect(uiState.isDrowsy) {
+    LaunchedEffect(uiState.isDrowsy)  {
         if (uiState.isDrowsy) {
             mediaPlayer?.stop()
             mediaPlayer = MediaPlayer.create(context, R.raw.alarm)
             mediaPlayer?.start()
 
             val vibrator = context.getSystemService(Vibrator::class.java)
+
             vibrator.vibrate(
                 VibrationEffect.createOneShot(
                     1500,  // duration in ms
@@ -58,15 +56,11 @@ fun DrowsinessScreen(viewModel: DrowsinessViewModel) {
         } else {
             mediaPlayer?.stop()
         }
-
     }
-
     LaunchedEffect(Unit) {
-        val cameraProviderFuture = ProcessCameraProvider.getInstance(context)
-<<<<<<< HEAD
-=======
 
->>>>>>> 8d198eecdf3bf42f79ee7773e982fd9283528a2a
+        val cameraProviderFuture = ProcessCameraProvider.getInstance(context)
+
         val cameraProvider = withContext(Dispatchers.IO) {
             cameraProviderFuture.get()
         }
@@ -104,11 +98,7 @@ fun DrowsinessScreen(viewModel: DrowsinessViewModel) {
 
     Surface(
         modifier = Modifier.fillMaxSize(),
-<<<<<<< HEAD
-        color = Color.Black
-=======
-        color = Color.Black        // force dark background
->>>>>>> 8d198eecdf3bf42f79ee7773e982fd9283528a2a
+        color = Color.Black // force dark background
     ) {
         Column(
             modifier = Modifier
@@ -125,7 +115,6 @@ fun DrowsinessScreen(viewModel: DrowsinessViewModel) {
 
             Spacer(modifier = Modifier.height(8.dp))
 
-            @Suppress("COMPOSE_APPLIER_CALL_MISMATCH")
             AndroidView(
                 factory = { previewView },
                 modifier = Modifier
@@ -151,6 +140,8 @@ fun DrowsinessScreen(viewModel: DrowsinessViewModel) {
     }
 }
 
+
+/*
 private fun ImageProxy.toBitmap(): Bitmap? {
     val yBuffer = planes[0].buffer // Y
     val uBuffer = planes[1].buffer // U
@@ -173,4 +164,4 @@ private fun ImageProxy.toBitmap(): Bitmap? {
 
     return BitmapFactory.decodeByteArray(jpegBytes, 0, jpegBytes.size)
 }
-
+ */

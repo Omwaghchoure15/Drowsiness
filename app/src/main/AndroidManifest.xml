@@ -18,12 +18,8 @@
         android:networkSecurityConfig="@xml/network_security_config"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-<<<<<<< HEAD
         android:theme="@style/Theme.MySplashScreen"
         android:usesCleartextTraffic="true">
-=======
-        android:theme="@style/Theme.MySplashScreen">
->>>>>>> 8d198eecdf3bf42f79ee7773e982fd9283528a2a
 
         <activity
             android:name=".MainActivity"
