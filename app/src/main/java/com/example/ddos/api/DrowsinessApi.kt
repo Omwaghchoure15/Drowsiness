@@ -1,4 +1,4 @@
-package com.example.ddos.data
+package com.example.ddos.api
 
 import com.google.gson.annotations.SerializedName
 import retrofit2.Response

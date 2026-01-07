@@ -9,12 +9,11 @@ import androidx.activity.viewModels
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
-import com.example.ddos.ui.DrowsinessScreen
-import com.example.ddos.ui.DrowsinessViewModel
-import com.example.ddos.ui.theme.DDosTheme   // or whatever your theme is called
+import com.example.ddos.model.DrowsinessViewModel
+import com.example.ddos.DrowsinessScreen
+import com.example.ddos.ui.theme.DDosTheme
 
 class MainActivity : ComponentActivity() {
-
     private val viewModel: DrowsinessViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {

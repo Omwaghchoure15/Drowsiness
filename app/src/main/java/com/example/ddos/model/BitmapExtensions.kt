@@ -1,4 +1,4 @@
-package com.example.ddos.util
+package com.example.ddos.model
 
 import android.graphics.Bitmap
 import android.util.Base64

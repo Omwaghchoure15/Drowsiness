@@ -1,4 +1,4 @@
-package com.example.ddos.ui
+package com.example.ddos.model
 
 data class UiState(
     val isDrowsy: Boolean = false,

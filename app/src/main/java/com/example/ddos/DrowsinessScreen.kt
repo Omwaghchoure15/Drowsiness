@@ -1,4 +1,4 @@
-package com.example.ddos.ui
+package com.example.ddos
 
 import android.media.MediaPlayer
 import android.os.VibrationEffect
@@ -19,16 +19,9 @@ import androidx.compose.ui.platform.LocalLifecycleOwner
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
 import androidx.core.content.ContextCompat
+import com.example.ddos.model.DrowsinessViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
-import com.example.ddos.R
-
-
-@Composable
-private fun DrowsinessPreview(viewModel: DrowsinessViewModel){
-DrowsinessScreen(viewModel)
-
-}
 
 @Composable
 fun DrowsinessScreen(viewModel: DrowsinessViewModel) {

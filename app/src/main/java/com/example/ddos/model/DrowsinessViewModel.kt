@@ -1,13 +1,11 @@
-package com.example.ddos.ui
+package com.example.ddos.model
 
 import android.graphics.Bitmap
 import android.util.Log
-import android.util.Log.e
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.ddos.data.ApiClient
-import com.example.ddos.data.DrowsinessRequest
-import com.example.ddos.util.toBase64
+import com.example.ddos.api.ApiClient
+import com.example.ddos.api.DrowsinessRequest
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.update
@@ -21,6 +19,7 @@ class DrowsinessViewModel : ViewModel() {
     private var lastSentTime = 0L
     private var drowsyCount = 0
     private var awakeCount = 0
+
     private val DrowsyFrames = 3 // ~2–3 seconds
 
     fun sendFrame(bitmap: Bitmap) {

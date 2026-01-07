@@ -1,4 +1,4 @@
-package com.example.ddos.data
+package com.example.ddos.api
 
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
