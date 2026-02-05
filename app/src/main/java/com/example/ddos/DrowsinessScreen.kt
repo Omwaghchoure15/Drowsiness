@@ -50,6 +50,7 @@ fun DrowsinessScreen(viewModel: DrowsinessViewModel) {
             mediaPlayer?.stop()
         }
     }
+
     LaunchedEffect(Unit) {
 
         val cameraProviderFuture = ProcessCameraProvider.getInstance(context)
@@ -88,6 +89,7 @@ fun DrowsinessScreen(viewModel: DrowsinessViewModel) {
 
         }
     }
+
 
     Surface(
         modifier = Modifier.fillMaxSize(),

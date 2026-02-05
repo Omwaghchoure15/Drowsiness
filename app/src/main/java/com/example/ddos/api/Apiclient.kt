@@ -14,7 +14,7 @@ object ApiClient {
 
     val api: DrowsinessApi by lazy {
         Retrofit.Builder()
-            .baseUrl("https://drowsiness-api.onrender.com/")
+            .baseUrl("http://192.168.0.156:5000/")
             .client(okHttpClient)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
