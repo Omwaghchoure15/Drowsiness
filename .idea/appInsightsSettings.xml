@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="com.example.ddos" />
+                  <option name="mobileSdkAppId" value="1:449259880760:android:34f129faf0a1fcdba641cd" />
+                  <option name="projectId" value="drowsiness-app-27e04" />
+                  <option name="projectNumber" value="449259880760" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />

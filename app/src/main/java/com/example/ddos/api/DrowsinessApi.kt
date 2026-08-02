@@ -6,8 +6,7 @@ import retrofit2.http.Body
 import retrofit2.http.POST
 
 data class DrowsinessRequest(
-    @SerializedName("imageBase64")
-    val image: String
+    @SerializedName("imageBase64") val image: String
 )
 data class DrowsinessResponse(
     val drowsy: Boolean,
@@ -15,7 +14,5 @@ data class DrowsinessResponse(
 )
 interface DrowsinessApi {
     @POST("predict")
-    suspend fun sendFrame(
-        @Body request: DrowsinessRequest
-    ): Response<DrowsinessResponse>
+    suspend fun sendFrame(@Body request: DrowsinessRequest): Response<DrowsinessResponse>
 }

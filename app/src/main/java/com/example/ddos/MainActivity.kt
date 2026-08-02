@@ -9,7 +9,6 @@ import androidx.activity.viewModels
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
-import com.example.ddos.model.DrowsinessViewModel
 import com.example.ddos.ui.theme.DDosTheme
 
 class MainActivity : ComponentActivity() {

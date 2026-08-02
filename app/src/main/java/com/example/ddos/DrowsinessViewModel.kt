@@ -1,4 +1,4 @@
-package com.example.ddos.model
+package com.example.ddos
 
 import android.graphics.Bitmap
 import android.util.Log
@@ -7,6 +7,8 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.ddos.api.ApiClient
 import com.example.ddos.api.DrowsinessRequest
+import com.example.ddos.model.UiState
+import com.example.ddos.model.toBase64
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.update
@@ -40,7 +42,8 @@ class DrowsinessViewModel : ViewModel() {
                 val base64 = resized.toBase64()
 
                 val response = ApiClient.api.sendFrame(
-                    DrowsinessRequest(base64)
+                    DrowsinessRequest(
+                        base64)
                 )
 
                 if (response.isSuccessful) {

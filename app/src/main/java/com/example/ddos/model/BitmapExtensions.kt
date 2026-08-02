@@ -10,7 +10,5 @@ fun Bitmap.toBase64(): String {
         this.compress(Bitmap.CompressFormat.JPEG, 90, outputStream)
         val byteArray = outputStream.toByteArray()
         Base64.encodeToString(byteArray, Base64.NO_WRAP)
-    } catch (e: Exception) {
-        ""
-    }
+    } catch (_: Exception) { "" }
 }
